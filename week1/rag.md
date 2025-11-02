@@ -9,7 +9,7 @@ The adhoc knowledge passed to an LLM is often referred as *context*. The quality
 ## What is RAG?
 Retrieval-Augmented Generation is a commonly used application that allows users to interact with proprietary information through a publicly-trained LLM.
 
-Say an online course platform has an FAQ document available only to paid subscribers. Developers may want to create an AI chatbot that user can turn to instead of parsing through the document. In order for the underlying LLM to provide usefule and accurate answers, the document content is passed to the LLM along with every user query.
+Say an online course platform has an FAQ document available only to paid subscribers. Developers may want to create an AI chatbot that a user can turn to instead of parsing through the entire document to find an answer. In order for the underlying LLM to provide usefule and accurate answers, the document content is passed to the LLM along with every user query.
 
 In a RAG system, a search engine uses the user query to identify relevant documents in the knowledge base (retrieval part). This subset of documents is what is ultimately passed to the LLM for context. By preemptively narrowing the scope of the information that the LLM has to work with, we reduce the risk of incorrect responses and make the process more cost-effective. Naturally, he quality of RAG's information pre-selection system has an important impact on the quality of the LLM responses.
 

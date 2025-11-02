@@ -7,14 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "jupyter>=1.1.1",
     "minsearch>=0.0.7",
-    "numpy>=2.3.4",
-    "openai>=2.6.0",
-    "openai-agents>=0.4.2",
-    "pydantic>=2.12.3",
-    "python-frontmatter>=1.1.0",
+    "openai>=2.6.1",
     "requests>=2.32.5",
-    "sentence-transformers>=5.1.2",
     "toyaikit>=0.0.5",
-    "tqdm>=4.67.1",
-    "youtube-transcript-api>=1.2.3",
 ]
