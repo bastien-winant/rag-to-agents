@@ -2,7 +2,7 @@
 ## The limits of LLMs
 Large Language Models (LLMs) are trained using large quantities of publicly available data. This data forms the knowledge base on which the model relies to provide answers to user prompts.
 
-In many practical applications, we want to use LLMs to answer questions about specific material that is not part of this public knowledge base. In order for an LLM to be of any use to any such application, it needs to be provided case-specific data on which to base answers.
+In many practical applications, we want to use LLMs to answer questions about specific material that is not publicly available, and that the LLM has never been exposed to. In order for an LLM to be of any use to any such application, it needs to be provided case-specific data on which to base answers.
 
 The adhoc knowledge passed to an LLM is often referred as *context*. The quality of an AI application is highly dependent on the appropriate context being passed to the underlying LLM. Retrieval-augmented generation (RAG) is a framework for retrieving relevant information and passing it on to an LLM.
 
@@ -13,4 +13,9 @@ Say an online course platform has an FAQ document available only to paid subscri
 
 In a RAG system, a search engine uses the user query to identify relevant documents in the knowledge base (retrieval part). This subset of documents is what is ultimately passed to the LLM for context. By preemptively narrowing the scope of the information that the LLM has to work with, we reduce the risk of incorrect responses and make the process more cost-effective. Naturally, he quality of RAG's information pre-selection system has an important impact on the quality of the LLM responses.
 
-## The RAG flow
+## Data Pipeline
+It is often the case that the knowledge base we want an LLM to draw context from is not immediately searchable. Data may be stored in different formats (CSV, JSON, markdown, etc.) and have inconsistent formatting.
+
+In the context of RAG, a data pipeline is a piece of code a piece of code that extracts data, transforms it, and loads it into a search engine. The aim of this process is to store create a knowledge base that is consistently formatted and easily searchable.
+
+Before the retrieval-augmented prompting cycle can be used reliably, a data pipeline must be put in place that feeds and regularly updates the search engine data.
